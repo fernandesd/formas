@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Formas</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -42,6 +42,7 @@
 
             .content {
                 text-align: center;
+                
             }
 
             .title {
@@ -61,6 +62,20 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .green-line{
+                width:  80%;
+                height: 40px;
+                background-color: green;
+                position:absolute;
+                margin:auto;
+                margin-top:40px;
+            }
+
+            img.logo{
+                width:40%;
+            }
+
         </style>
     </head>
     <body>
@@ -72,28 +87,25 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
+                       <!-- @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        @endif-->
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img class="logo" src="{{ asset('svg/logo.png') }}" alt="">                  
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                    <a href="#">Docs</a>                    
+                </div>       
+                
             </div>
+
+            <div class="green-line"></div>
         </div>
     </body>
 </html>

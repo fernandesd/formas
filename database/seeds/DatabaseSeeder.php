@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('users')->insert([
             'name' => 'admin',
+            'institution' => 'UFBA',
             'email' => 'admin@admin.com',
             'password' => bcrypt('secret'),
         ]);

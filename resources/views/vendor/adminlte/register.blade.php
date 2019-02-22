@@ -29,6 +29,16 @@
                         </span>
                     @endif
                 </div>
+                <div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
+                    <input type="text" name="institution" class="form-control" value="{{ old('institution') }}"
+                           placeholder="Nome da instituição">
+                    <span class="glyphicon glyphicon-education form-control-feedback"></span>
+                    @if ($errors->has('institution'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('institution') }}</strong>
+                        </span>
+                    @endif
+                </div>
                 <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
                     <input type="email" name="email" class="form-control" value="{{ old('email') }}"
                            placeholder="{{ trans('adminlte::adminlte.email') }}">
